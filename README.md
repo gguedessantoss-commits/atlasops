@@ -2,6 +2,10 @@
 
 AtlasOps is a presentation-ready TypeScript monorepo for a multi-tenant operations command platform. It is positioned as a B2B SaaS for incident management, SLA coordination, auditability, and executive visibility across distributed operations such as logistics, fulfillment, support, and platform environments.
 
+## Live demo
+
+- Landing page: [atlasops-ten.vercel.app](https://atlasops-ten.vercel.app)
+
 ## Stack
 
 - `Next.js` for the product-facing web experience
@@ -21,7 +25,7 @@ AtlasOps is a presentation-ready TypeScript monorepo for a multi-tenant operatio
 ## Prerequisites
 
 - `Git`
-- `Node.js 24+`
+- `Node.js 20.9+`
 - `pnpm 10+`
 
 ## First run
