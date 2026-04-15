@@ -1,0 +1,29 @@
+{
+  "name": "atlasops",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.33.0",
+  "engines": {
+    "node": ">=24.14.1"
+  },
+  "scripts": {
+    "build:packages": "pnpm --filter @atlasops/core build && pnpm --filter @atlasops/ui build",
+    "dev": "pnpm build:packages && turbo dev --parallel",
+    "build": "turbo build",
+    "typecheck": "pnpm build:packages && turbo typecheck",
+    "test": "turbo test",
+    "lint": "biome check .",
+    "format": "biome format --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.12",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "turbo": "^2.9.6",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.4"
+  }
+}
