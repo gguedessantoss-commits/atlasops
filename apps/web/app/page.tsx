@@ -5,250 +5,250 @@ import Link from "next/link";
 const navigation = [
   {
     href: "#problem",
-    label: "Problem",
+    label: "Problema",
   },
   {
     href: "#solution",
-    label: "Solution",
+    label: "Solucao",
   },
   {
     href: "#in-action",
-    label: "In action",
+    label: "Na pratica",
   },
   {
     href: "#playbooks",
-    label: "Playbooks",
+    label: "Fluxos",
   },
   {
     href: "#capabilities",
-    label: "Capabilities",
+    label: "Capacidades",
   },
 ];
 
 const heroStats = [
   {
-    value: "1 command center",
-    label: "Centralized operations",
+    value: "1 centro de comando",
+    label: "Operacao centralizada",
     description:
-      "Incidents, service health, ownership, and SLA pressure live in one shared surface.",
+      "Incidentes, saude dos servicos, ownership e pressao de SLA ficam visiveis em uma unica superficie.",
   },
   {
     value: "B2B SaaS",
-    label: "Multi-tenant by design",
+    label: "Multi-tenant por design",
     description:
-      "Built for companies with distributed teams, multiple workspaces, and operational governance needs.",
+      "Pensado para empresas com times distribuidos, multiplos workspaces e necessidade de governanca operacional.",
   },
   {
-    value: "Live visibility",
-    label: "Leadership-ready",
+    value: "Visibilidade em tempo real",
+    label: "Pronto para lideranca",
     description:
-      "Operations leaders can see what is critical now, who owns the response, and where risk is growing.",
+      "Lideres de operacao conseguem ver o que esta critico agora, quem responde por isso e onde o risco esta crescendo.",
   },
 ];
 
 const productSignals = [
-  "Centralizes incidents, SLA risk, and service health in one workflow",
-  "Built for logistics, fulfillment, support operations, and platform teams",
-  "Combines operational coordination, auditability, and executive visibility",
+  "Centraliza incidentes, risco de SLA e saude dos servicos em um unico fluxo",
+  "Foi desenhado para logistica, fulfillment, operacoes de suporte e times de plataforma",
+  "Combina coordenacao operacional, auditabilidade e visibilidade executiva",
 ];
 
 const painPoints = [
   {
-    title: "Context is scattered",
+    title: "O contexto fica espalhado",
     description:
-      "Incidents, alerts, spreadsheets, and Slack threads live in different places, so teams waste time stitching together what is happening.",
+      "Incidentes, alertas, planilhas e conversas vivem em lugares diferentes, entao o time perde tempo tentando montar o que esta acontecendo.",
   },
   {
-    title: "Ownership gets fuzzy",
+    title: "A responsabilidade fica nebulosa",
     description:
-      "When priority, severity, and responsibility are unclear, resolution slows down and escalations become reactive instead of coordinated.",
+      "Quando prioridade, severidade e responsabilidade nao estao claras, a resolucao desacelera e as escalacoes viram reacao em vez de coordenacao.",
   },
   {
-    title: "Leadership flies blind",
+    title: "A lideranca perde visibilidade",
     description:
-      "Executives and operations managers often lack a live view of SLA risk, operational posture, and the impact of active incidents.",
+      "Executivos e gestores de operacao muitas vezes nao tem uma visao ao vivo do risco de SLA, da postura operacional e do impacto dos incidentes ativos.",
   },
 ];
 
 const workflow = [
   {
-    title: "Detect and centralize",
+    title: "Detectar e centralizar",
     description:
-      "AtlasOps consolidates operational incidents, service health signals, and business-critical events into a single command surface.",
+      "O AtlasOps consolida incidentes operacionais, sinais de saude dos servicos e eventos criticos do negocio em uma unica superficie de comando.",
   },
   {
-    title: "Prioritize by business risk",
+    title: "Priorizar pelo risco de negocio",
     description:
-      "Each item is ranked by severity, status, and remaining SLA runway so teams know what must move first.",
+      "Cada item e ranqueado por severidade, status e tempo restante de SLA para que o time saiba o que precisa andar primeiro.",
   },
   {
-    title: "Coordinate response",
+    title: "Coordenar a resposta",
     description:
-      "Incidents gain clear owners, timeline context, and operational commentary so the response feels structured, not improvised.",
+      "Os incidentes ganham owners claros, contexto de timeline e comentarios operacionais para que a resposta seja estruturada, nao improvisada.",
   },
   {
-    title: "Audit and report",
+    title: "Auditar e reportar",
     description:
-      "Leadership gets a compact operational view while the team retains a searchable trail of important actions and decisions.",
+      "A lideranca recebe uma visao operacional compacta enquanto o time mantem uma trilha pesquisavel de acoes e decisoes importantes.",
   },
 ];
 
 const audiences = [
   {
-    title: "Operations managers",
+    title: "Gestores de operacao",
     description:
-      "Need a live command view of incidents, throughput risk, and response ownership across distributed teams.",
-    fit: "Best for logistics, fulfillment, and service operations.",
+      "Precisam de uma visao ao vivo dos incidentes, do risco de throughput e da ownership da resposta em times distribuidos.",
+    fit: "Melhor encaixe para logistica, fulfillment e operacoes de servico.",
   },
   {
-    title: "Support leaders",
+    title: "Liderancas de suporte",
     description:
-      "Need escalations organized by severity and SLA so customer-impacting issues do not disappear into ticket noise.",
-    fit: "Best for support centers and customer operations.",
+      "Precisam de escalacoes organizadas por severidade e SLA para que problemas com impacto no cliente nao se percam no ruido dos tickets.",
+    fit: "Melhor encaixe para centrais de suporte e operacoes de atendimento.",
   },
   {
-    title: "NOC and command center teams",
+    title: "Times de NOC e command center",
     description:
-      "Need a shared operational board with strong priority cues, system health, and clear coordination during active incidents.",
-    fit: "Best for reliability and command workflows.",
+      "Precisam de um quadro operacional compartilhado, com prioridade clara, saude dos sistemas e coordenacao durante incidentes ativos.",
+    fit: "Melhor encaixe para confiabilidade e fluxos de comando.",
   },
   {
-    title: "Platform and digital ops",
+    title: "Times de plataforma e operacao digital",
     description:
-      "Need to connect service degradation with business impact and give stakeholders a readable operational narrative.",
-    fit: "Best for SaaS and platform-heavy businesses.",
+      "Precisam conectar degradacao de servico com impacto no negocio e dar aos stakeholders uma narrativa operacional facil de ler.",
+    fit: "Melhor encaixe para SaaS e negocios com alta dependencia de plataforma.",
   },
 ];
 
 const capabilities = [
   {
-    title: "Incident command board",
+    title: "Quadro de comando de incidentes",
     description:
-      "A queue of incidents ranked by severity, operational impact, and time remaining before SLA breach.",
+      "Uma fila de incidentes ranqueada por severidade, impacto operacional e tempo restante antes do breach de SLA.",
   },
   {
-    title: "Executive dashboard",
+    title: "Dashboard executivo",
     description:
-      "Leadership-friendly metrics that turn operational noise into a clear summary of pressure, health, and risk.",
+      "Metricas orientadas para lideranca que transformam ruido operacional em um resumo claro de pressao, saude e risco.",
   },
   {
-    title: "SLA and priority visibility",
+    title: "Visibilidade de SLA e prioridade",
     description:
-      "Teams can quickly see what is close to breaching, what is contained, and where escalation pressure is rising.",
+      "Os times enxergam rapido o que esta perto de estourar, o que esta contido e onde a pressao de escalacao esta aumentando.",
   },
   {
-    title: "Timeline and auditability",
+    title: "Timeline e auditabilidade",
     description:
-      "Every important event can be captured as a timeline entry so the product supports governance, not just monitoring.",
+      "Todo evento importante pode ser registrado na timeline para que o produto apoie governanca, nao apenas monitoramento.",
   },
   {
-    title: "Multi-tenant workspaces",
+    title: "Workspaces multi-tenant",
     description:
-      "Different clients, regions, or business units can operate inside their own controlled workspace context.",
+      "Clientes, regioes ou unidades de negocio diferentes podem operar dentro do proprio contexto controlado de workspace.",
   },
   {
-    title: "Automation-ready architecture",
+    title: "Arquitetura pronta para automacoes",
     description:
-      "The product foundation is ready for role-based access, Prisma, notifications, and background job workflows.",
+      "A base do produto ja esta pronta para RBAC, Prisma, notificacoes e fluxos com background jobs.",
   },
 ];
 
 const useCases = [
-  "Coordinating fulfillment or logistics disruptions across multiple hubs",
-  "Managing high-priority support escalations with clear SLA ownership",
-  "Running a command center for platform incidents and degraded services",
-  "Giving executives a trustworthy real-time view of operational risk",
+  "Coordenar interrupcoes de fulfillment ou logistica entre multiplos hubs",
+  "Gerenciar escalacoes de suporte de alta prioridade com ownership claro de SLA",
+  "Operar um command center para incidentes de plataforma e servicos degradados",
+  "Dar a executivos uma visao confiavel, em tempo real, do risco operacional",
 ];
 
 const demoGallery = [
   {
-    eyebrow: "Executive overview",
-    title: "The command center surfaces risk in one place.",
+    eyebrow: "Visao executiva",
+    title: "O centro de comando expoe o risco em um unico lugar.",
     description:
-      "Leadership and frontline teams can see open pressure, SLA runway, service posture, and incident context without stitching together multiple tools.",
+      "Lideranca e time operacional conseguem ver pressao aberta, tempo de SLA, postura de servico e contexto dos incidentes sem juntar informacao de varias ferramentas.",
     image: "/images/landing/atlasops-overview.png",
     href: "/dashboard",
-    cta: "Open overview",
+    cta: "Abrir overview",
   },
   {
-    eyebrow: "Alert-driven incident board",
-    title: "Critical alerts become managed response workflows.",
+    eyebrow: "Fila de incidentes orientada por alertas",
+    title: "Alertas criticos viram fluxos de resposta gerenciados.",
     description:
-      "High-severity operational alerts can immediately turn into incidents with owner, customer impact, next action, and visible time remaining before the next breach.",
+      "Alertas operacionais de alta severidade podem virar incidentes imediatamente, com owner, impacto no cliente, proxima acao e tempo visivel antes do proximo breach.",
     image: "/images/landing/atlasops-incidents.png",
     href: "/dashboard/incidents",
-    cta: "Open incidents",
+    cta: "Abrir incidentes",
   },
   {
-    eyebrow: "Audit and governance",
-    title: "Every escalation leaves a readable operational trail.",
+    eyebrow: "Auditoria e governanca",
+    title: "Cada escalacao deixa uma trilha operacional legivel.",
     description:
-      "Playbooks, approvals, automated digests, and response changes stay attached to a timeline that leadership and operators can trust.",
+      "Playbooks, aprovacoes, digests automatizados e mudancas de resposta ficam ligados a uma timeline em que lideranca e operadores podem confiar.",
     image: "/images/landing/atlasops-audit.png",
     href: "/dashboard/audit",
-    cta: "Open audit trail",
+    cta: "Abrir trilha de auditoria",
   },
   {
-    eyebrow: "Command team and workstreams",
-    title: "The platform shows who is running the response.",
+    eyebrow: "Time de comando e workstreams",
+    title: "A plataforma mostra quem esta conduzindo a resposta.",
     description:
-      "AtlasOps is not only about monitoring. It also shows squads, owners, active capacity, and workstreams that carry the response forward.",
+      "O AtlasOps nao e so monitoramento. Ele tambem mostra squads, owners, capacidade ativa e workstreams que levam a resposta adiante.",
     image: "/images/landing/atlasops-team.png",
     href: "/dashboard/team",
-    cta: "Open team view",
+    cta: "Abrir visao do time",
   },
 ] as const;
 
 const alertExamples = [
   {
     tone: "critical",
-    label: "Critical alert",
-    title: "Webhook sync lag on partner retries",
+    label: "Alerta critico",
+    title: "Atraso de sincronizacao de webhook em retries de parceiro",
     trigger:
-      "Trigger when partner retries keep climbing for 8 minutes and order-state acknowledgements fall below the safe threshold.",
+      "Disparar quando os retries do parceiro seguirem subindo por 8 minutos e os acknowledgements do estado do pedido cairem abaixo do limite seguro.",
     response:
-      "Create a critical incident, assign the incident commander, notify leadership, and attach an impact statement for partner operations.",
+      "Criar um incidente critico, atribuir o incident commander, notificar a lideranca e anexar uma avaliacao de impacto para a operacao do parceiro.",
   },
   {
     tone: "warning",
-    label: "Watch alert",
-    title: "Regional throughput dipped below baseline",
+    label: "Alerta de atencao",
+    title: "Throughput regional caiu abaixo da baseline",
     trigger:
-      "Trigger when a regional hub drops below the expected morning throughput curve or routing latency drifts toward SLA risk.",
+      "Disparar quando um hub regional cair abaixo da curva esperada de throughput matinal ou quando a latencia de roteamento se aproximar do risco de SLA.",
     response:
-      "Open a watch-listed incident, route it to logistics control, and create a workstream to track recovery against baseline.",
+      "Abrir um incidente em observacao, encaminhar para o controle logistico e criar um workstream para acompanhar a recuperacao contra a baseline.",
   },
   {
     tone: "neutral",
-    label: "Automated digest",
-    title: "Executive pulse during active response",
+    label: "Digest automatizado",
+    title: "Pulso executivo durante resposta ativa",
     trigger:
-      "Trigger every 30 minutes while a critical incident is open or when a response path changes materially.",
+      "Disparar a cada 30 minutos enquanto um incidente critico estiver aberto ou quando o caminho da resposta mudar de forma relevante.",
     response:
-      "Generate a short digest with incident owners, remaining SLA runway, current workstreams, and any customer-facing impact.",
+      "Gerar um digest curto com owners dos incidentes, tempo restante de SLA, workstreams atuais e qualquer impacto visivel para o cliente.",
   },
 ] as const;
 
 const playbookIdeas = [
   {
-    title: "Critical incident routing",
+    title: "Roteamento de incidente critico",
     description:
-      "Build rules that convert raw alerts into incidents with severity, ownership, SLA countdown, and required next action.",
+      "Criar regras que convertam alertas brutos em incidentes com severidade, ownership, contagem regressiva de SLA e proxima acao obrigatoria.",
   },
   {
-    title: "Approval and comms workflows",
+    title: "Fluxos de aprovacao e comunicacao",
     description:
-      "Require support or operations approval before customer comms, public status updates, or escalation branches go live.",
+      "Exigir aprovacao de suporte ou operacao antes que comunicacoes para clientes, status publicos ou ramificacoes de escalacao entrem em vigor.",
   },
   {
-    title: "Leadership operating digests",
+    title: "Digests operacionais para lideranca",
     description:
-      "Publish recurring updates that summarize business impact, response ownership, and workstream status without exposing chat noise.",
+      "Publicar atualizacoes recorrentes que resumem impacto no negocio, ownership da resposta e status dos workstreams sem expor o ruido do chat.",
   },
   {
-    title: "Workspace-specific command surfaces",
+    title: "Superficies de comando por workspace",
     description:
-      "Create separate operational environments by client, region, or business unit while keeping auditability and team ownership intact.",
+      "Criar ambientes operacionais separados por cliente, regiao ou unidade de negocio mantendo auditabilidade e ownership do time.",
   },
 ] as const;
 
@@ -260,7 +260,7 @@ export default function HomePage() {
           AtlasOps
         </Link>
 
-        <nav className="site-nav" aria-label="AtlasOps sections">
+        <nav className="site-nav" aria-label="Secoes do AtlasOps">
           {navigation.map((item) => (
             <a href={item.href} key={item.href}>
               {item.label}
@@ -269,47 +269,49 @@ export default function HomePage() {
         </nav>
 
         <Link className="button button--ghost" href="/dashboard">
-          View live demo
+          Ver demo ao vivo
         </Link>
       </header>
 
       <section className="landing-hero">
         <div className="landing-hero__content">
           <span className="landing-pill">
-            Operational command for distributed teams
+            Comando operacional para times distribuidos
           </span>
           <h1>
-            Keep incidents, ownership, and SLA risk in one command surface.
+            Mantenha incidentes, ownership e risco de SLA em uma unica
+            superficie de comando.
           </h1>
           <p>
-            AtlasOps is a multi-tenant SaaS for companies that need to detect,
-            prioritize, coordinate, and audit operational incidents across
-            logistics, fulfillment, support, and platform environments.
+            AtlasOps e um SaaS multi-tenant para empresas que precisam detectar,
+            priorizar, coordenar e auditar incidentes operacionais em ambientes
+            de logistica, fulfillment, suporte e plataforma.
           </p>
 
           <div className="hero-checklist">
-            <span>Incident management</span>
-            <span>Service health visibility</span>
-            <span>SLA coordination</span>
-            <span>Audit trail</span>
+            <span>Gestao de incidentes</span>
+            <span>Visibilidade de servicos</span>
+            <span>Coordenacao de SLA</span>
+            <span>Trilha de auditoria</span>
           </div>
 
           <div className="landing-actions">
             <Link className="button button--primary" href="/dashboard">
-              Open dashboard
+              Abrir dashboard
             </Link>
             <a className="button button--ghost" href="#solution">
-              Understand the product
+              Entender o produto
             </a>
           </div>
         </div>
 
         <Card className="landing-preview">
-          <span className="landing-preview__eyebrow">Product definition</span>
-          <strong>What AtlasOps is</strong>
+          <span className="landing-preview__eyebrow">Definicao do produto</span>
+          <strong>O que o AtlasOps e</strong>
           <p>
-            A B2B platform for command centers and operations leaders who need
-            one trustworthy place to manage incidents and monitor business risk.
+            Uma plataforma B2B para command centers e lideres de operacao que
+            precisam de um lugar confiavel para gerenciar incidentes e monitorar
+            risco de negocio.
           </p>
           <ul>
             {productSignals.map((signal) => (
@@ -331,15 +333,16 @@ export default function HomePage() {
 
       <section className="section-shell" id="problem">
         <div className="section-heading">
-          <span className="section-title__eyebrow">The problem</span>
+          <span className="section-title__eyebrow">O problema</span>
           <h2>
-            Operations break when critical context is spread across too many
-            tools.
+            A operacao quebra quando o contexto critico esta espalhado por
+            ferramentas demais.
           </h2>
           <p>
-            AtlasOps exists for teams that cannot afford fragmented response
-            workflows. The product creates one operational truth for what is
-            happening, who owns it, and how much business risk is on the table.
+            O AtlasOps existe para times que nao podem operar com fluxos de
+            resposta fragmentados. O produto cria uma verdade operacional unica
+            sobre o que esta acontecendo, quem responde por isso e quanto risco
+            de negocio esta em jogo.
           </p>
         </div>
 
@@ -356,15 +359,15 @@ export default function HomePage() {
 
       <section className="section-shell" id="solution">
         <div className="section-heading">
-          <span className="section-title__eyebrow">The solution</span>
+          <span className="section-title__eyebrow">A solucao</span>
           <h2>
-            AtlasOps gives teams a repeatable operating model for incident
-            response.
+            O AtlasOps entrega um modelo operacional repetivel para resposta a
+            incidentes.
           </h2>
           <p>
-            Instead of treating operations as scattered status updates, AtlasOps
-            turns response into a structured flow that is visible to both the
-            frontline team and leadership.
+            Em vez de tratar a operacao como atualizacoes espalhadas de status,
+            o AtlasOps transforma a resposta em um fluxo estruturado, visivel
+            tanto para o time da linha de frente quanto para a lideranca.
           </p>
         </div>
 
@@ -381,14 +384,14 @@ export default function HomePage() {
 
       <section className="section-shell" id="in-action">
         <div className="section-heading">
-          <span className="section-title__eyebrow">In action</span>
+          <span className="section-title__eyebrow">Na pratica</span>
           <h2>
-            Real product views make the workflow easy to understand at a glance.
+            Visoes reais do produto deixam o fluxo facil de entender de cara.
           </h2>
           <p>
-            These screens show how AtlasOps can present executive posture,
-            alert-driven incidents, audit history, and the command team behind
-            the response.
+            Essas telas mostram como o AtlasOps pode apresentar postura
+            executiva, incidentes guiados por alertas, historico de auditoria e
+            o time de comando por tras da resposta.
           </p>
         </div>
 
@@ -420,14 +423,12 @@ export default function HomePage() {
 
       <section className="section-shell" id="audience">
         <div className="section-heading">
-          <span className="section-title__eyebrow">Audience</span>
-          <h2>
-            Built for teams that run real-world operations under pressure.
-          </h2>
+          <span className="section-title__eyebrow">Publico-alvo</span>
+          <h2>Construido para times que operam o mundo real sob pressao.</h2>
           <p>
-            AtlasOps is not a generic dashboard. It is positioned for
-            operational environments where SLA, service stability, and response
-            ownership directly affect the business.
+            O AtlasOps nao e um dashboard generico. Ele e posicionado para
+            ambientes operacionais em que SLA, estabilidade de servico e
+            ownership da resposta afetam diretamente o negocio.
           </p>
         </div>
 
@@ -444,22 +445,24 @@ export default function HomePage() {
 
       <section className="section-shell" id="playbooks">
         <div className="section-heading">
-          <span className="section-title__eyebrow">Playbooks and alerts</span>
+          <span className="section-title__eyebrow">Fluxos e alertas</span>
           <h2>
-            AtlasOps can orchestrate more than dashboards. It can drive the
-            operating model itself.
+            O AtlasOps pode orquestrar mais do que dashboards. Ele pode conduzir
+            o proprio modelo operacional.
           </h2>
           <p>
-            The platform is designed to support alert ingestion, structured
-            playbooks, automated digests, and workspace-specific rules that feel
-            credible in real operations.
+            A plataforma foi desenhada para suportar ingestao de alertas,
+            playbooks estruturados, digests automatizados e regras por workspace
+            com cara de operacao real.
           </p>
         </div>
 
         <div className="playbook-layout">
           <Card className="alert-board">
-            <span className="landing-preview__eyebrow">Example alerts</span>
-            <h3>What the system can detect and trigger</h3>
+            <span className="landing-preview__eyebrow">
+              Exemplos de alertas
+            </span>
+            <h3>O que o sistema pode detectar e disparar</h3>
 
             <div className="alert-stack">
               {alertExamples.map((alert) => (
@@ -470,10 +473,10 @@ export default function HomePage() {
                   <span className="alert-card__label">{alert.label}</span>
                   <h4>{alert.title}</h4>
                   <p>
-                    <strong>Trigger:</strong> {alert.trigger}
+                    <strong>Gatilho:</strong> {alert.trigger}
                   </p>
                   <p>
-                    <strong>Response:</strong> {alert.response}
+                    <strong>Resposta:</strong> {alert.response}
                   </p>
                 </article>
               ))}
@@ -493,14 +496,14 @@ export default function HomePage() {
 
       <section className="section-shell" id="capabilities">
         <div className="section-heading">
-          <span className="section-title__eyebrow">Capabilities</span>
+          <span className="section-title__eyebrow">Capacidades</span>
           <h2>
-            Everything revolves around operational clarity and controlled
-            execution.
+            Tudo gira em torno de clareza operacional e execucao controlada.
           </h2>
           <p>
-            The product surface is designed to help teams see, decide, assign,
-            and communicate quickly without losing auditability or context.
+            A superficie do produto foi desenhada para ajudar o time a enxergar,
+            decidir, atribuir e comunicar rapidamente sem perder auditabilidade
+            nem contexto.
           </p>
         </div>
 
@@ -516,20 +519,20 @@ export default function HomePage() {
 
       <section className="section-shell section-shell--split" id="use-cases">
         <div className="section-heading">
-          <span className="section-title__eyebrow">Where it fits</span>
+          <span className="section-title__eyebrow">Onde ele se encaixa</span>
           <h2>
-            AtlasOps works best where business operations are distributed and
-            time-sensitive.
+            O AtlasOps funciona melhor onde as operacoes do negocio sao
+            distribuidas e sensiveis ao tempo.
           </h2>
           <p>
-            The product is especially credible in environments where command
-            discipline matters more than ticket volume alone.
+            O produto e especialmente crivel em ambientes em que disciplina de
+            comando importa mais do que apenas volume de tickets.
           </p>
         </div>
 
         <div className="use-case-layout">
           <Card className="use-case-card">
-            <span className="landing-preview__eyebrow">Common scenarios</span>
+            <span className="landing-preview__eyebrow">Cenarios comuns</span>
             <ul className="use-case-list">
               {useCases.map((useCase) => (
                 <li key={useCase}>{useCase}</li>
@@ -538,25 +541,26 @@ export default function HomePage() {
           </Card>
 
           <Card className="cta-section">
-            <span className="landing-preview__eyebrow">Live demo</span>
+            <span className="landing-preview__eyebrow">Demo ao vivo</span>
             <h2>
-              Open the dashboard and see the product from inside an active
-              workspace.
+              Abra o dashboard e veja o produto por dentro de um workspace
+              ativo.
             </h2>
             <p>
-              The dashboard view shows how AtlasOps presents incidents, service
-              health, operating signals, and executive context in one place.
+              A visao de dashboard mostra como o AtlasOps apresenta incidentes,
+              saude dos servicos, sinais operacionais e contexto executivo em um
+              unico lugar.
             </p>
 
             <div className="landing-actions">
               <Link className="button button--primary" href="/dashboard">
-                Open dashboard
+                Abrir dashboard
               </Link>
               <Link
                 className="button button--ghost"
                 href="/api/v1/workspace/snapshot"
               >
-                Inspect live workspace API
+                Inspecionar API publica do workspace
               </Link>
             </div>
           </Card>
