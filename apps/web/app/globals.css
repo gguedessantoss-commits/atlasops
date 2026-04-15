@@ -690,7 +690,9 @@ a {
 .problem-grid,
 .workflow-grid,
 .audience-grid,
-.capability-grid {
+.capability-grid,
+.demo-gallery,
+.playbook-grid {
   display: grid;
   gap: 18px;
 }
@@ -708,10 +710,16 @@ a {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.demo-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .problem-card,
 .workflow-step,
 .audience-card,
-.capability-card {
+.capability-card,
+.demo-gallery__card,
+.playbook-card {
   min-height: 220px;
 }
 
@@ -743,6 +751,157 @@ a {
   margin-top: 18px;
   color: var(--accent);
   font-size: 0.88rem;
+}
+
+.demo-gallery__card {
+  overflow: hidden;
+  padding: 0;
+}
+
+.demo-gallery__image {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(5, 11, 21, 0.85);
+}
+
+.demo-gallery__image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(5, 11, 21, 0), rgba(5, 11, 21, 0.12)),
+    linear-gradient(135deg, rgba(129, 240, 204, 0.05), transparent 38%);
+  pointer-events: none;
+}
+
+.demo-gallery__image-asset {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.demo-gallery__content {
+  display: grid;
+  gap: 12px;
+  padding: 22px 24px 24px;
+}
+
+.demo-gallery__content h3,
+.alert-board h3,
+.alert-card h4,
+.playbook-card h3 {
+  margin: 0;
+}
+
+.demo-gallery__content p,
+.alert-board p,
+.alert-card p,
+.playbook-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.demo-gallery__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin-top: 4px;
+  color: var(--accent);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.demo-gallery__link::after {
+  content: "→";
+}
+
+.playbook-layout {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1.05fr);
+  gap: 18px;
+}
+
+.alert-board {
+  display: grid;
+  gap: 16px;
+}
+
+.alert-stack {
+  display: grid;
+  gap: 14px;
+}
+
+.alert-card {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  background: rgba(13, 29, 50, 0.52);
+}
+
+.alert-card__label {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.alert-card strong {
+  color: var(--text);
+}
+
+.alert-card--critical {
+  border-color: rgba(255, 109, 122, 0.22);
+  background: linear-gradient(
+    180deg,
+    rgba(58, 13, 24, 0.45),
+    rgba(13, 29, 50, 0.56)
+  );
+}
+
+.alert-card--critical .alert-card__label {
+  background: rgba(255, 109, 122, 0.14);
+  color: var(--critical);
+}
+
+.alert-card--warning {
+  border-color: rgba(255, 184, 102, 0.22);
+  background: linear-gradient(
+    180deg,
+    rgba(58, 38, 8, 0.42),
+    rgba(13, 29, 50, 0.56)
+  );
+}
+
+.alert-card--warning .alert-card__label {
+  background: rgba(255, 184, 102, 0.14);
+  color: var(--warning);
+}
+
+.alert-card--neutral .alert-card__label {
+  background: rgba(129, 240, 204, 0.14);
+  color: var(--accent);
+}
+
+.playbook-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.playbook-card {
+  display: grid;
+  gap: 12px;
 }
 
 .section-shell--split .use-case-layout {
@@ -991,6 +1150,7 @@ a {
   .dashboard-main-grid,
   .dashboard-lower-grid,
   .split-view,
+  .playbook-layout,
   .section-shell--split .use-case-layout {
     grid-template-columns: 1fr;
   }
@@ -1013,12 +1173,14 @@ a {
   .workflow-grid,
   .audience-grid,
   .capability-grid,
+  .demo-gallery,
   .hero-stat-grid,
   .metric-grid,
   .pillar-grid,
   .view-metric-grid,
   .team-grid,
-  .workstream-grid {
+  .workstream-grid,
+  .playbook-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -1050,19 +1212,29 @@ a {
   .workflow-grid,
   .audience-grid,
   .capability-grid,
+  .demo-gallery,
   .hero-stat-grid,
   .metric-grid,
   .pillar-grid,
   .dashboard-lower-grid,
   .view-metric-grid,
   .team-grid,
-  .workstream-grid {
+  .workstream-grid,
+  .playbook-grid {
     grid-template-columns: 1fr;
   }
 
   .ui-card {
     padding: 20px;
     border-radius: 22px;
+  }
+
+  .demo-gallery__card {
+    padding: 0;
+  }
+
+  .demo-gallery__image {
+    min-height: 220px;
   }
 
   .activity-item {

@@ -1,4 +1,5 @@
 import { Card } from "@atlasops/ui";
+import Image from "next/image";
 import Link from "next/link";
 
 const navigation = [
@@ -11,8 +12,12 @@ const navigation = [
     label: "Solution",
   },
   {
-    href: "#audience",
-    label: "Audience",
+    href: "#in-action",
+    label: "In action",
+  },
+  {
+    href: "#playbooks",
+    label: "Playbooks",
   },
   {
     href: "#capabilities",
@@ -155,6 +160,98 @@ const useCases = [
   "Giving executives a trustworthy real-time view of operational risk",
 ];
 
+const demoGallery = [
+  {
+    eyebrow: "Executive overview",
+    title: "The command center surfaces risk in one place.",
+    description:
+      "Leadership and frontline teams can see open pressure, SLA runway, service posture, and incident context without stitching together multiple tools.",
+    image: "/images/landing/atlasops-overview.png",
+    href: "/dashboard",
+    cta: "Open overview",
+  },
+  {
+    eyebrow: "Alert-driven incident board",
+    title: "Critical alerts become managed response workflows.",
+    description:
+      "High-severity operational alerts can immediately turn into incidents with owner, customer impact, next action, and visible time remaining before the next breach.",
+    image: "/images/landing/atlasops-incidents.png",
+    href: "/dashboard/incidents",
+    cta: "Open incidents",
+  },
+  {
+    eyebrow: "Audit and governance",
+    title: "Every escalation leaves a readable operational trail.",
+    description:
+      "Playbooks, approvals, automated digests, and response changes stay attached to a timeline that leadership and operators can trust.",
+    image: "/images/landing/atlasops-audit.png",
+    href: "/dashboard/audit",
+    cta: "Open audit trail",
+  },
+  {
+    eyebrow: "Command team and workstreams",
+    title: "The platform shows who is running the response.",
+    description:
+      "AtlasOps is not only about monitoring. It also shows squads, owners, active capacity, and workstreams that carry the response forward.",
+    image: "/images/landing/atlasops-team.png",
+    href: "/dashboard/team",
+    cta: "Open team view",
+  },
+] as const;
+
+const alertExamples = [
+  {
+    tone: "critical",
+    label: "Critical alert",
+    title: "Webhook sync lag on partner retries",
+    trigger:
+      "Trigger when partner retries keep climbing for 8 minutes and order-state acknowledgements fall below the safe threshold.",
+    response:
+      "Create a critical incident, assign the incident commander, notify leadership, and attach an impact statement for partner operations.",
+  },
+  {
+    tone: "warning",
+    label: "Watch alert",
+    title: "Regional throughput dipped below baseline",
+    trigger:
+      "Trigger when a regional hub drops below the expected morning throughput curve or routing latency drifts toward SLA risk.",
+    response:
+      "Open a watch-listed incident, route it to logistics control, and create a workstream to track recovery against baseline.",
+  },
+  {
+    tone: "neutral",
+    label: "Automated digest",
+    title: "Executive pulse during active response",
+    trigger:
+      "Trigger every 30 minutes while a critical incident is open or when a response path changes materially.",
+    response:
+      "Generate a short digest with incident owners, remaining SLA runway, current workstreams, and any customer-facing impact.",
+  },
+] as const;
+
+const playbookIdeas = [
+  {
+    title: "Critical incident routing",
+    description:
+      "Build rules that convert raw alerts into incidents with severity, ownership, SLA countdown, and required next action.",
+  },
+  {
+    title: "Approval and comms workflows",
+    description:
+      "Require support or operations approval before customer comms, public status updates, or escalation branches go live.",
+  },
+  {
+    title: "Leadership operating digests",
+    description:
+      "Publish recurring updates that summarize business impact, response ownership, and workstream status without exposing chat noise.",
+  },
+  {
+    title: "Workspace-specific command surfaces",
+    description:
+      "Create separate operational environments by client, region, or business unit while keeping auditability and team ownership intact.",
+  },
+] as const;
+
 export default function HomePage() {
   return (
     <main className="landing-page">
@@ -282,6 +379,45 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section-shell" id="in-action">
+        <div className="section-heading">
+          <span className="section-title__eyebrow">In action</span>
+          <h2>
+            Real product views make the workflow easy to understand at a glance.
+          </h2>
+          <p>
+            These screens show how AtlasOps can present executive posture,
+            alert-driven incidents, audit history, and the command team behind
+            the response.
+          </p>
+        </div>
+
+        <div className="demo-gallery">
+          {demoGallery.map((item) => (
+            <Card className="demo-gallery__card" key={item.title}>
+              <div className="demo-gallery__image">
+                <Image
+                  alt={item.title}
+                  className="demo-gallery__image-asset"
+                  height={1200}
+                  src={item.image}
+                  width={1600}
+                />
+              </div>
+
+              <div className="demo-gallery__content">
+                <span className="landing-preview__eyebrow">{item.eyebrow}</span>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <Link className="demo-gallery__link" href={item.href}>
+                  {item.cta}
+                </Link>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </section>
+
       <section className="section-shell" id="audience">
         <div className="section-heading">
           <span className="section-title__eyebrow">Audience</span>
@@ -303,6 +439,55 @@ export default function HomePage() {
               <span>{audience.fit}</span>
             </Card>
           ))}
+        </div>
+      </section>
+
+      <section className="section-shell" id="playbooks">
+        <div className="section-heading">
+          <span className="section-title__eyebrow">Playbooks and alerts</span>
+          <h2>
+            AtlasOps can orchestrate more than dashboards. It can drive the
+            operating model itself.
+          </h2>
+          <p>
+            The platform is designed to support alert ingestion, structured
+            playbooks, automated digests, and workspace-specific rules that feel
+            credible in real operations.
+          </p>
+        </div>
+
+        <div className="playbook-layout">
+          <Card className="alert-board">
+            <span className="landing-preview__eyebrow">Example alerts</span>
+            <h3>What the system can detect and trigger</h3>
+
+            <div className="alert-stack">
+              {alertExamples.map((alert) => (
+                <article
+                  className={`alert-card alert-card--${alert.tone}`}
+                  key={alert.title}
+                >
+                  <span className="alert-card__label">{alert.label}</span>
+                  <h4>{alert.title}</h4>
+                  <p>
+                    <strong>Trigger:</strong> {alert.trigger}
+                  </p>
+                  <p>
+                    <strong>Response:</strong> {alert.response}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </Card>
+
+          <div className="playbook-grid">
+            {playbookIdeas.map((idea) => (
+              <Card className="playbook-card" key={idea.title}>
+                <h3>{idea.title}</h3>
+                <p>{idea.description}</p>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -367,12 +552,12 @@ export default function HomePage() {
               <Link className="button button--primary" href="/dashboard">
                 Open dashboard
               </Link>
-              <a
+              <Link
                 className="button button--ghost"
-                href="http://localhost:4000/health"
+                href="/api/v1/workspace/snapshot"
               >
-                Inspect API health
-              </a>
+                Inspect live workspace API
+              </Link>
             </div>
           </Card>
         </div>
