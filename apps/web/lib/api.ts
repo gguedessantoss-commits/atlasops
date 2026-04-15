@@ -7,18 +7,18 @@ import {
 } from "@atlasops/core";
 import { cache } from "react";
 
-const defaultApiBaseUrl = "http://localhost:4000";
-
 export const getWorkspaceSnapshot = cache(
   async (): Promise<WorkspaceSnapshot> => {
-    const apiBaseUrl =
-      process.env.NEXT_PUBLIC_API_BASE_URL ?? defaultApiBaseUrl;
+    const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+
+    if (!apiBaseUrl) {
+      return buildWorkspaceSnapshot("atlas-prime");
+    }
 
     try {
       const response = await fetch(`${apiBaseUrl}/v1/workspace/snapshot`, {
         cache: "no-store",
       });
-
       if (!response.ok) {
         throw new Error(`Workspace request failed with ${response.status}`);
       }

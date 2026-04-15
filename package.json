@@ -4,7 +4,7 @@
   "private": true,
   "packageManager": "pnpm@10.33.0",
   "engines": {
-    "node": ">=24.14.1"
+    "node": ">=20.9.0"
   },
   "scripts": {
     "build:packages": "pnpm --filter @atlasops/core build && pnpm --filter @atlasops/ui build",
@@ -13,6 +13,7 @@
     "typecheck": "pnpm build:packages && turbo typecheck",
     "test": "turbo test",
     "lint": "biome check .",
+    "postinstall": "pnpm build:packages",
     "format": "biome format --write ."
   },
   "devDependencies": {
